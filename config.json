@@ -1,0 +1,13 @@
+{
+    "mqtt":{
+        "broker":"127.0.0.1",
+        "port":1883,
+        "topic":"mwts.co.za/mwt_keyboard_to_mqtt",
+        "topic_status":"mwts.co.za/mwt_keyboard_to_mqtt/status",
+        "topic_errors":"mwts.co.za/mwt_keyboard_to_mqtt/errors"
+    },
+    "evdev":{
+        "search_sleep_s": 5,
+        "evdev_name":"Sycreader RFID Technology Co., Ltd SYC ID&IC USB Reader"
+    }
+}

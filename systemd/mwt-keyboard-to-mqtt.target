@@ -1,0 +1,9 @@
+
+[Unit]
+Description=Start this Target to start all mwt-keyboard-to-mqtt Services
+Requires=multi-user.target
+After=multi-user.target
+AllowIsolate=yes
+
+[Install]
+WantedBy=multi-user.target

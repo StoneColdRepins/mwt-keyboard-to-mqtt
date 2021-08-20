@@ -1,0 +1,13 @@
+
+[Unit]
+Description=Start this Daemon to start all mwt-keyboard-to-mqtt-device-handler Services
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/mwt_keyboard_to_mqtt_device_handler
+User=root
+Group=root
+
+[Install]
+WantedBy=mwt-keyboard-to-mqtt.target
