@@ -27,7 +27,8 @@ Fell free to pull and adjust to your requirements
         python3 evdev-list.py
     ```
 2. Configure ```/etc/mwt_keyboard_to_mqtt/config.json```
-3. Run 
+3. get a list of device names with ```python3 evdev-list.py```
+4. Run 
     ```
         sudo systemctl enable --now mwt-keyboard-to-mqtt.target
         sudo systemctl start --now mwt-keyboard-to-mqtt.target
