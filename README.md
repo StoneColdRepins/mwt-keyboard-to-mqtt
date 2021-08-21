@@ -1,6 +1,6 @@
 
 
-# mwt-keyboard-to-mqtt -- cloned from IoT Barcode Scanner
+# mwt-keyboard-to-mqtt 
 
 A service that makes usb keyboard devies available on the network for IoT use.
 
