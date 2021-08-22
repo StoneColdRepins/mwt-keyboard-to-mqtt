@@ -65,5 +65,5 @@ Fell free to pull and adjust to your requirements
 
 
 ## Links
-
+- [mosquitto for rpi] (https://mosquitto.org/blog/2013/01/mosquitto-debian-repository/)
 - [cloned from xengineering/iot-barcode-scanner ](https://github.com/xengineering/iot-barcode-scanner)
