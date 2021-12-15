@@ -33,20 +33,24 @@ Fell free to pull and adjust to your requirements
 4. get a list of device names with ```python3 evdev-list.py```
 5. Run 
     ```
-    sudo systemctl enable --now mwt-keyboard-to-mqtt.target
-    sudo systemctl start --now mwt-keyboard-to-mqtt.target
-    sudo systemctl status --now mwt-keyboard-to-mqtt.target
-    sudo systemctl stop --now mwt-keyboard-to-mqtt.target
-    sudo systemctl disable --now mwt-keyboard-to-mqtt.target
+    
+        sudo systemctl enable --now mwt-keyboard-to-mqtt.target
+        sudo systemctl start --now mwt-keyboard-to-mqtt.target
+        sudo systemctl status --now mwt-keyboard-to-mqtt.target
 
-    sudo systemctl enable mwt-keyboard-to-mqtt-device-handler.service
-    sudo systemctl start mwt-keyboard-to-mqtt-device-handler.service
-    sudo systemctl status mwt-keyboard-to-mqtt-device-handler.service
-    sudo systemctl stop mwt-keyboard-to-mqtt-device-handler.service
-    sudo systemctl disable mwt-keyboard-to-mqtt-device-handler.service
+        sudo systemctl enable mwt-keyboard-to-mqtt-device-handler.service
+        sudo systemctl start mwt-keyboard-to-mqtt-device-handler.service
+        sudo systemctl status mwt-keyboard-to-mqtt-device-handler.service
 
-    sudo systemctl status --now mwt-keyboard-to-mqtt.target
-    sudo systemctl status mwt-keyboard-to-mqtt-device-handler.service
+        sudo systemctl stop --now mwt-keyboard-to-mqtt.target
+        sudo systemctl disable --now mwt-keyboard-to-mqtt.target
+
+        sudo systemctl stop mwt-keyboard-to-mqtt-device-handler.service
+        sudo systemctl disable mwt-keyboard-to-mqtt-device-handler.service
+
+        sudo systemctl status --now mwt-keyboard-to-mqtt.target
+        sudo systemctl status mwt-keyboard-to-mqtt-device-handler.service
+
     ```
 5. Listen to MQTT output (e.g. with ```mosquitto_sub -h localhost -t "mwts.co.za/mwt_keyboard_to_mqtt"```)
 
