@@ -69,12 +69,17 @@ def readBarcodes(devicePath):
                     caps = True
                 if data.keystate == 0:
                     caps = False
-            if data.keystate == 1 and data.scancode != 42: # Catch only keydown, and not Enter
+            if data.scancode == 54:
+                if data.keystate == 1:
+                    caps = True
+                if data.keystate == 0:
+                    caps = False                    
+            if data.keystate == 1 and data.scancode != 42 and data.scancode != 54: # Catch only keydown, and not Enter
                 if caps:
                     key_lookup = u'{}'.format(capscodes.get(data.scancode)) or u'UNKNOWN:[{}]'.format(data.scancode)  # Lookup or return UNKNOWN:XX
                 else:
                     key_lookup = u'{}'.format(scancodes.get(data.scancode)) or u'UNKNOWN:[{}]'.format(data.scancode)  # Lookup or return UNKNOWN:XX
-                if (data.scancode != 42) and (data.scancode != 28):
+                if (data.scancode != 42) and (data.scancode != 54) and (data.scancode != 28):
                     barcode += key_lookup
                 if(data.scancode == 28):
                     mqtt_barcode(barcode)
